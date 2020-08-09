@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <?php
 include "contentControl/db_connect.php";
 
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     //echo "<b>Connection Status:</b> we good<br>";
 }
 
-//Query statement 
+//Query statement
 $sql = "SELECT `Content`,`Category`,`Date` FROM `master`";
 
 //Query output
@@ -29,10 +29,10 @@ $outputContainer['Links'] = [];
 $outputContainer['Partners'] = [];
 
 //Styling function for line breaks
-//turns out this may have been useless! <br>, even in a string, does the same thing 
+//turns out this may have been useless! <br>, even in a string, does the same thing
 function separate($string){
     if ( strpos($string, '|') ) {
-        //if it's true, break it up by that char 
+        //if it's true, break it up by that char
         $out = explode('|',$string);
         for($x=0;$x<count($out);$x++){
             print($out[$x]);
@@ -46,16 +46,16 @@ function separate($string){
 //Iterate over your output if there's data
 if ($result->num_rows > 0) {
     //print("<div style='height:300px;width:450px;overflow:scroll;border:1px solid yellow;'>");
-    
+
     //echo "_";
-    
+
     //data of each row
     while($row = $result->fetch_assoc()) {
         //echo separate($row["Content"]);
         //implementing function from above
         //print("<span style='height:40px;width:400px;border:1px solid blue;'>");
-        
-        
+
+
         //echo $row["Category"];
         //echo "<br>";
         if($row["Category"] == "Hours"){
@@ -81,8 +81,8 @@ if ($result->num_rows > 0) {
         }else if($row["Category"] == "Partners"){
             $input = [$row["Content"],$row["Date"]];
             array_push($outputContainer['Partners'],$input);
-        } 
-        
+        }
+
         /*
         echo $row["Content"];
         echo "  ";
@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
         //print("</span>");
         */
     }
-    
+
     //print("</div>");
 } else {
     echo "0 results";
@@ -118,10 +118,10 @@ CloseCon($conn);
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'UA-163322175-1');
     </script>
-    
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -129,7 +129,7 @@ CloseCon($conn);
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-GSCV67V');</script>
     <!-- End Google Tag Manager -->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sportmaster</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -157,7 +157,7 @@ function resetScroll(){
   carousel.scrollTo(0,0);
 }
 //continueScroll();
-//end scroller code 
+//end scroller code
 
 //google map code
 function myMap() {
@@ -171,11 +171,11 @@ var marker = new google.maps.Marker({
     title: 'Hello World!'
   });
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  
+
 marker.setMap(map);
 }
 //myMap();
-//end google map code        
+//end google map code
     </script>
     <style>
 body{
@@ -183,7 +183,7 @@ body{
   background:linear-gradient(rgba(0,120,200,0.0) 15%,rgba(0,221,221,0.2) 50%, rgba(0,120,200,0.3) 80% );
   font-family:"Helvetica";
   line-height:1.5;
-  
+
 }
 a{
     text-decoration:none;
@@ -201,7 +201,7 @@ h5{
   color:rgba(50,50,90,1);
   font-weight:normal;
 }
-#logo{ 
+#logo{
   display:flex;
   align-items:center;
   margin:auto;
@@ -269,7 +269,7 @@ h5{
 .imgContainer img{
     height:100%;
     transition:1s;
-    
+
     position:absolute;
 }
 .grid2{
@@ -319,14 +319,14 @@ footer{
     }
     .mobileAdjust{
         grid-row:auto !important;
-        grid-column: auto !important; 
+        grid-column: auto !important;
         min-height:333px;
     }
     #pricing{
         grid-row:0/1 !important;
         grid-column: auto !important;
     }
-    
+
     /*pics*/
     .carousel{
         width:100%;
@@ -340,7 +340,7 @@ footer{
     .mobileBlock{
         display:none;
     }
-    
+
 }
     </style>
 </head>
@@ -355,9 +355,9 @@ footer{
      separate($outputContainer['Hours'][count($outputContainer['Hours'])-1][0]);
      echo "</h5>";
     ?>
-    <!--   
+    <!--
     <h5>
-     
+
       Mon-Thurs: 7am - 7pm<br>
       Fri: 7am - 8pm<br>
       Sat-Sun: 6am - 5pm<br>
@@ -365,7 +365,7 @@ footer{
     -->
   </div>
   <div class='gridBlock' style='background:url("/images/storefront.jfif") center;background-size:100%;min-height:150px;'>
-    
+
   </div>
   <style>
     .socialMediaContainer{
@@ -393,11 +393,11 @@ footer{
     }
     .top{}
     .bottom{opacity:0;}
-    
+
   </style>
   <div class='gridBlock mobileAdjust' style='grid-row:1/3;grid-column:3/3;'>
     <h4>Address:</h4>
-    <h5>6301 Ditman St, Philadelphia PA 19135</h5>
+    <h5>6301 Ditman Street, Philadelphia PA 19135</h5>
     <br>
     <h4>Phone:</h4>
     <h5>215-331-8836</h5>
@@ -473,12 +473,12 @@ var multiplier = 1000;
 function fadePic(){
     document.getElementById("img1").style.animation = 'fadeIn ' + timingVar +'s 0s infinite';
     document.getElementById("img1").src = "images/customers/" + picIndex + ".png";
-    
+
     //document.getElementById("test").style.background='blue';
 }
 function fadeRow(){
-    setInterval(function(){ 
-        fadePic(); 
+    setInterval(function(){
+        fadePic();
         picIndex++;
         if(picIndex>12){
             picIndex = 1;
@@ -488,12 +488,12 @@ function fadeRow(){
 function fadeItem(){
     var tops = document.getElementsByClassName('top');
     var bots = document.getElementsByClassName('bottom');
-    
-    
+
+
     //document.getElementById('bool').innerHTML = picBool;
     //tops[0].style.opacity = 0;
     //bots[0].style.opacity = 1;
-    
+
     /*
     setTimeout(function(){
         tops[0].src = '/images/customers/3.png';
@@ -525,7 +525,7 @@ fadeItem();
 var picInterval = setInterval(fadeItem,7700);
 /*
 function fadeSequence(){
-    //pic 1 
+    //pic 1
     setTimeout(,0*multiplier);
     //pic 2
     setTimeout(,1*multiplier);
@@ -537,17 +537,17 @@ function fadeSequence(){
     setTimeout(,4*multiplier);
 }
 */
-//inner fxn: 
+//inner fxn:
 //1. changes specific pic according to current var --> resets var if it's over limit
 //setTimeout(myFunction, 3000)
-//picFader code --- END 
+//picFader code --- END
 
-//Need to have top and bottom pics that are being alternated. 
+//Need to have top and bottom pics that are being alternated.
 
 </script>
 <!--
 <div class='picScroller'></div>
---> 
+-->
 <div class='grid2'>
   <div class='gridBlock' id='test'>
     <h4>Useful Links</h4>
@@ -608,9 +608,9 @@ function fadeSequence(){
     </div>
     -->
   </div>
-</div> 
+</div>
 <!--
-<footer></footer> 
+<footer></footer>
 -->
 </body>
 </html>
