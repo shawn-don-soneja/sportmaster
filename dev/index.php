@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include "contentControl/db_connect.php";
+include "/contentControl/db_connect.php";
 
 //Start Connection
 $conn = OpenCon();
@@ -553,7 +553,7 @@ function fadeSequence(){
   <div class="gridBlock" id="test">
     <h4>Useful Links</h4>
     <h5><a href="https://www.fishandboat.com/Pages/default.aspx">PA Fish and
-    Boat</a> <br> <a href="https://www.saltwatertides.com/">Tides</a><br></h5>   
+    Boat</a> <br> <a href="https://www.saltwatertides.com/">Tides</a><br></h5>
   </div>
 
   <div class="gridBlock" style="grid-column:1/3;grid-row:1/3;">
