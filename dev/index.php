@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
-include "/contentControl/db_connect.php";
+
+ini_set('display_errors', 1);
+
+include "db_connect.php";
 
 //Start Connection
 $conn = OpenCon();
