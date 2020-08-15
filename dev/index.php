@@ -142,6 +142,11 @@ CloseCon($conn);
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
     <!--end fav icon shit-->
+
+    <!-- Shopify -->
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script src="shopify.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV108IEQ-yUAvKsY-g7WSzPuFnzvuhiZk&callback=myMap"></script>
     <script>
 //scroller code
