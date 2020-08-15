@@ -571,9 +571,20 @@ function fadeSequence(){
 
 
   <div class="gridBlock" style="grid-column:1/4;grid-row:1/3;">
-    <h4 style="display:inline-block;background:blue;">Helpful Info</h4>
-    <div>Test Words 1</div>
-    <div>Test Words 2</div>
+    <h4 style="display:inline-block;">Pricing</h4><br>
+
+    <div style="display:inline-block;width:30%;margin-left:15px;">
+         <b>Bloodworms:</b><br> Regular: $13.90/ dozen<br> Large: $17.60/dozen<br> Jumbo:
+        $22.00/dozen<br><br><b>Nightcrawlers:</b> $3.25/dozen<br><b>Nitro Worms:</b>
+        $4.25/dozen<br><b>Red Worms:</b> $3.79/24 count<br><b>Meal Worms:</b>
+        $2.39/30 count, $6.99/100 count<br><br>
+    </div>
+    <div style="display:inline-block;width:30%;">
+        <b>Chicken Liver:</b> $2.75/pint<br>
+        <b>Shrimp:</b> $2.99/pack<br><b>Clams:</b> $7.50/pint, $14.50/quart<br>
+        <b>Green Crabs:</b> $4.25/dozen<br><br><b>Fatheads:</b> $3.50/dozen<br><b>Medium
+        Shiners:</b> $6.00/dozen<br>
+    </div>
     <div style="background:lightblue;position:absolute;top:0;right:0;width:400px;height:100%;"></div>
   </div>
 
@@ -595,50 +606,61 @@ function fadeSequence(){
 
 </div>
 
+<!--
+removing old grid and php
 <div class='grid2'>
   <div class='gridBlock' id='test'>
     <h4>Useful Links</h4>
     <?php
+    /*
      echo "<h5>";
      separate($outputContainer['Links'][count($outputContainer['Links'])-1][0]);
      //echo $outputContainer['Hours'][count($outputContainer['Hours'])-1][0];
      echo "</h5>";
+     */
     ?>
     <!--
     <h5><a href='https://www.fishandboat.com/Pages/default.aspx'>PA Fish and Boat</a></h5>
     <h5><a href='https://www.saltwatertides.com/'>Tides</a></h5>
-    -->
+    --
   </div>
   <div class='gridBlock'>
     <h4>Helpful Info</h4>
+
     <?php
+    /*
      echo "<h5>";
      separate($outputContainer['HelpInfo'][count($outputContainer['HelpInfo'])-1][0]);
      //echo $outputContainer['Hours'][count($outputContainer['Hours'])-1][0];
      echo "</h5>";
+     */
     ?>
   </div>
   <div class='gridBlock'>
     <h4>Partners</h4>
     <?php
+    /*
      echo "<h5>";
      separate($outputContainer['Partners'][count($outputContainer['Partners'])-1][0]);
      //echo $outputContainer['Hours'][count($outputContainer['Hours'])-1][0];
      echo "</h5>";
+     */
     ?>
     <!--
     <h5><a href='https://www.phila.gov/departments/philadelphia-parks-recreation/'>Philadelphia Parks & Rec</a></h5>
     <h5><a href='https://riverfrontnorth.org/'>Riverfront North</a></h5>
     <h5><a href='https://www.facebook.com/northeastjigco/'>NorthEast Jig Co</a></h5>
-    -->
+    --
   </div>
   <div class='gridBlock ' id='pricing' style='grid-column:2/2;grid-row:1/4;'>
     <h4>Pricing</h4>
     <?php
+    /*
      echo "<div class='priceItem'>";
      separate($outputContainer['Pricing'][count($outputContainer['Pricing'])-1][0]);
      //echo $outputContainer['Hours'][count($outputContainer['Hours'])-1][0];
      echo "</div>";
+     */
     ?>
     <!--
     <div class='priceItem'>
@@ -653,9 +675,10 @@ function fadeSequence(){
       Red Worms - $3.79/ 24 count<br><br>
       Meal Worms - $2.39/ 30 count, $6.99/ 100 count<br>
     </div>
-    -->
+    --
   </div>
 </div>
+-->
 <!--
 <footer></footer>
 -->
