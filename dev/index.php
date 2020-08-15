@@ -290,6 +290,16 @@ h5{
   border:0px solid red;
   margin-bottom:50px;
 }
+.grid3{
+  display:grid;
+  grid-template:1fr 1fr 1fr / 1fr 1fr 1fr;
+  min-height:500px;
+  width:90%;
+  margin:auto;
+  grid-gap:20px 10px;
+  border:0px solid red;
+  margin-bottom:50px;
+}
 .priceItem{
   margin:10px;
 }
@@ -557,18 +567,24 @@ function fadeSequence(){
 <div class='picScroller'></div>
 -->
 
-<div class="grid2">
+<div class="grid3">
+
+
+  <div class="gridBlock" style="grid-column:1/4;grid-row:1/4;">
+    <h4 style="display:inline-block">Helpful Info</h4>
+    <div style="background:lightblue;float:right;width:400px;height:100%;"></div>
+  </div>
+
   <div class="gridBlock" id="test">
     <h4>Useful Links</h4>
     <h5><a href="https://www.fishandboat.com/Pages/default.aspx">PA Fish and
     Boat</a> <br> <a href="https://www.saltwatertides.com/">Tides</a><br></h5>
   </div>
-
-  <div class="gridBlock" style="grid-column:1/3;grid-row:1/3;">
-    <h4 style="display:inline-block">Helpful Info</h4>
-    <div style="background:lightblue;float:right;width:400px;height:100%;"></div>
+  <div class="gridBlock" id="test">
+    <h4>Useful Links</h4>
+    <h5><a href="https://www.fishandboat.com/Pages/default.aspx">PA Fish and
+    Boat</a> <br> <a href="https://www.saltwatertides.com/">Tides</a><br></h5>
   </div>
-
   <div class="gridBlock" id="test">
     <h4>Useful Links</h4>
     <h5><a href="https://www.fishandboat.com/Pages/default.aspx">PA Fish and
