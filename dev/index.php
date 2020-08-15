@@ -144,7 +144,7 @@ CloseCon($conn);
     <!--end fav icon shit-->
 
     <!-- Shopify -->
-    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
     <script type="module" src="shopify.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV108IEQ-yUAvKsY-g7WSzPuFnzvuhiZk&callback=myMap"></script>
