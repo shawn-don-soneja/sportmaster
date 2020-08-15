@@ -570,9 +570,11 @@ function fadeSequence(){
 <div class="grid3">
 
 
-  <div class="gridBlock" style="grid-column:1/4;grid-row:1/4;">
-    <h4 style="display:inline-block">Helpful Info</h4>
-    <div style="background:lightblue;float:right;width:400px;height:100%;"></div>
+  <div class="gridBlock" style="grid-column:1/4;grid-row:1/3;">
+    <h4 style="display:inline-block;background:blue;">Helpful Info</h4>
+    <div>Test Words 1</div>
+    <div>Test Words 2</div>
+    <div style="background:lightblue;position:absolute;top:0;right:0;width:400px;height:100%;"></div>
   </div>
 
   <div class="gridBlock" id="test">
