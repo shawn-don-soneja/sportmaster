@@ -585,7 +585,10 @@ function fadeSequence(){
         <b>Green Crabs:</b> $4.25/dozen<br><br><b>Fatheads:</b> $3.50/dozen<br><b>Medium
         Shiners:</b> $6.00/dozen<br>
     </div>
-    <div style="background:lightblue;position:absolute;top:0;right:0;width:400px;height:100%;"></div>
+    <div style="border-left:1px solid lightblue;position:absolute;top:0;right:0;width:500px;height:100%;">
+        <h4>Featured Products</h4>
+
+    </div>
   </div>
 
   <div class="gridBlock" id="test">
