@@ -132,7 +132,7 @@ CloseCon($conn);
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-GSCV67V');</script>
     <!-- End Google Tag Manager -->
-
+<script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sportmaster</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -588,6 +588,35 @@ function fadeSequence(){
     <div style="border-left:1px solid lightblue;position:absolute;top:0;right:0;width:500px;height:100%;">
         <h4>Featured Products</h4>
 
+        <div id="bag">
+          ddd
+        </div>
+
+        <script>
+        const client = ShopifyBuy.buildClient({
+          domain: 'sportmaster-bait-and-tackle.myshopify.com',
+          storefrontAccessToken: '79ec0c028b5dfe70ceef7dd37003f272'
+        });
+         handle = 'st-croix-legend-series';
+        handle2 = 'penn-slammer-III-spinning-reel';
+        handle3 =  'shimano-spheros';
+        handle4 = 'daiwa-Bg-spinning-reel';
+         handles = [handle,handle2,handle3,handle4];
+          var i;
+        for (i = 0; i < handles.length; i++) {
+          client.product.fetchByHandle(handles[i]).then((product) => {
+          // Do something with the product
+
+           document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
+          console.log(product.variants.length);
+             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
+
+
+        });
+        }
+
+
+        </script>
     </div>
   </div>
 
