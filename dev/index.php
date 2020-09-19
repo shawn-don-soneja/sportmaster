@@ -642,12 +642,9 @@ function fadeSequence(){
             */
            });
         }
-        console.log('Map: ' + products);
-        for (let [key, value] of products) {
-          console.log(key + " = " + value.get('description') );
-        }
+        console.log('Map Size:' + products.size);
 
-        for (i = 0; i < handles.length; i++) {
+        for (var a = 0; a < handles.length; a++) {
           var productId = 'prod' + (i + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
