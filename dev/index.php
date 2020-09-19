@@ -599,9 +599,15 @@ function fadeSequence(){
             <h3>Name</h3>
             <p>Description</p>
           </div>
-          <div class='gridBlock' id='prod2'>2</div>
-          <div class='gridBlock' id='prod3'>3</div>
-          <div class='gridBlock' id='prod4'>4</div>
+          <div class='gridBlock' id='prod2'>
+            <h3>Name</h3>
+            <p>Description</p></div>
+          <div class='gridBlock' id='prod3'>
+            <h3>Name</h3>
+            <p>Description</p></div>
+          <div class='gridBlock' id='prod4'>
+            <h3>Name</h3>
+            <p>Description</p></div>
         </div>
         <!--<div id="bag"></div>-->
 
@@ -620,7 +626,7 @@ function fadeSequence(){
           var productId = 'prod' + (i + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
-
+          productDiv.childNodes[1].innerHTML = 'test';
           client.product.fetchByHandle(handles[i]).then((product) => {
             productDiv.childNodes[0].innerHTML = product.title;
 
