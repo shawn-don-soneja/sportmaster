@@ -595,9 +595,15 @@ function fadeSequence(){
 
         <div class='grid-two-by-two'
           style='background:blue;'>
-          hello
+          <div class='gridBlock' id='prod1'>
+            <h3>Name</h3>
+            <p>Description</p>
+          </div>
+          <div class='gridBlock' id='prod2'>2</div>
+          <div class='gridBlock' id='prod3'>3</div>
+          <div class='gridBlock' id='prod4'>4</div>
         </div>
-        <div id="bag"></div>
+        <!--<div id="bag"></div>-->
 
         <script>
         const client = ShopifyBuy.buildClient({
@@ -612,10 +618,18 @@ function fadeSequence(){
         var i;
         for (i = 0; i < handles.length; i++) {
           client.product.fetchByHandle(handles[i]).then((product) => {
-          // Do something with the product
-           document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
-           console.log(product.variants.length);
-           document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
+            var productId = 'prod' + (i + 1);
+            console.log(product);
+            var productDiv = document.getElementById(productId);
+
+
+
+            // Do something with the product
+            /*
+            document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
+            console.log(product.variants.length);
+            document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
+            */
            });
         }
         </script>
