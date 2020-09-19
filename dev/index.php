@@ -621,19 +621,23 @@ function fadeSequence(){
         handle3 =  'shimano-spheros';
         handle4 = 'daiwa-Bg-spinning-reel';
         handles = [handle,handle2,handle3,handle4];
+
+
+        let products = new Map();
+
+
         var i;
         for (i = 0; i < handles.length; i++) {
           var productId = 'prod' + (i + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
-          productDiv.childNodes[2].innerHTML = text;
+          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
 
-          
           client.product.fetchByHandle(handles[i]).then((product) => {
             console.log(product.title);
             productDiv.childNodes[1].innerHTML = product.title;
-
+            products.set(product.title, {description: product['description'] });
             // Do something with the product
             /*
             document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
@@ -642,6 +646,7 @@ function fadeSequence(){
             */
            });
         }
+        console.log('Map: ' + products);
         </script>
     </div><!-- End Featured Products (Shopify) -->
   </div><!-- End overall Gridblock - container for Pricing and Featured Items -->
