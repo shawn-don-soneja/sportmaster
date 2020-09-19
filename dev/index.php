@@ -624,7 +624,7 @@ function fadeSequence(){
 
 
         var products = [];
-        
+
         var i;
         for (i = 0; i < handles.length; i++) {
           client.product.fetchByHandle(handles[i]).then((product) => {
@@ -649,7 +649,7 @@ function fadeSequence(){
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
-          productDiv.childNodes[1].innerHTML = 'childNotes[2]';
+          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
         }
 
         </script>
