@@ -623,7 +623,7 @@ function fadeSequence(){
         handles = [handle,handle2,handle3,handle4];
 
 
-        var products = [];
+        var featuredProducts = [];
 
         var i;
         for (i = 0; i < handles.length; i++) {
@@ -640,11 +640,11 @@ function fadeSequence(){
             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
             */
             console.log('Name & Desc: ' + NameDescSet);
-            products.push(NameDescSet);
+            featuredProducts.push(NameDescSet);
            });
         }
-        console.log('Array Size' + products.length);
-        console.log('Array' + products);
+        console.log('Array Size' + featuredProducts.length);
+        console.log('Array' + featuredProducts);
 
         for (var a = 0; a < handles.length; a++) {
           var productId = 'prod' + (a + 1);
