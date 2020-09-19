@@ -646,7 +646,7 @@ function fadeSequence(){
         console.log('Array Size' + products.length);
 
         for (var a = 0; a < handles.length; a++) {
-          var productId = 'prod' + (i + 1);
+          var productId = 'prod' + (a + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
