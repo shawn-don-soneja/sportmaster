@@ -132,7 +132,7 @@ CloseCon($conn);
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-GSCV67V');</script>
     <!-- End Google Tag Manager -->
-<script src="http://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+<script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sportmaster</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -617,12 +617,12 @@ function fadeSequence(){
         handles = [handle,handle2,handle3,handle4];
         var i;
         for (i = 0; i < handles.length; i++) {
-          client.product.fetchByHandle(handles[i]).then((product) => {
-            var productId = 'prod' + (i + 1);
-            console.log(productId);
-            var productDiv = document.getElementById(productId);
-            productDiv.childNotes[0].innerHTML = product.title;
+          var productId = 'prod' + (i + 1);
+          console.log(productId);
+          var productDiv = document.getElementById(productId);
 
+          client.product.fetchByHandle(handles[i]).then((product) => {
+            productDiv.childNodes[0].innerHTML = product.title;
 
             // Do something with the product
             /*
