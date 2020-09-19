@@ -624,7 +624,7 @@ function fadeSequence(){
 
 
         var products = [];
-        
+
         var i;
         for (i = 0; i < handles.length; i++) {
           client.product.fetchByHandle(handles[i]).then((product) => {
@@ -639,6 +639,7 @@ function fadeSequence(){
             console.log(product.variants.length);
             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
             */
+            console.log('Name & Desc: ' + NameDescSet);
             products.push(NameDescSet);
            });
         }
@@ -649,7 +650,7 @@ function fadeSequence(){
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
-          productDiv.childNodes[1].innerHTML = 'childNotes[2]';
+          productDiv.childNodes[0].innerHTML = 'childNotes[2]';
         }
 
         </script>
