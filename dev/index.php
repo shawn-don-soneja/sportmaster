@@ -626,9 +626,9 @@ function fadeSequence(){
           var productId = 'prod' + (i + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
-          productDiv.childNodes[1].innerHTML = 'test';
+          productDiv.childNodes[2].innerHTML = 'test';
           client.product.fetchByHandle(handles[i]).then((product) => {
-            productDiv.childNodes[0].innerHTML = product.title;
+            productDiv.childNodes[1].innerHTML = product.title;
 
             // Do something with the product
             /*
