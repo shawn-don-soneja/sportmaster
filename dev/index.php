@@ -623,9 +623,8 @@ function fadeSequence(){
         handles = [handle,handle2,handle3,handle4];
 
 
-        let products = [];
-
-
+        var products = [];
+        
         var i;
         for (i = 0; i < handles.length; i++) {
           client.product.fetchByHandle(handles[i]).then((product) => {
