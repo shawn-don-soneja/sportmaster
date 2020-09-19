@@ -628,11 +628,7 @@ function fadeSequence(){
 
         var i;
         for (i = 0; i < handles.length; i++) {
-          var productId = 'prod' + (i + 1);
-          console.log(productId);
-          var productDiv = document.getElementById(productId);
-          var text = 'test ' + productId;
-          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
+
 
           client.product.fetchByHandle(handles[i]).then((product) => {
             console.log(product.title);
@@ -647,6 +643,18 @@ function fadeSequence(){
            });
         }
         console.log('Map: ' + products);
+        for (let [key, value] of products) {
+          console.log(key + " = " + value.get('description') );
+        }
+
+        for (i = 0; i < handles.length; i++) {
+          var productId = 'prod' + (i + 1);
+          console.log(productId);
+          var productDiv = document.getElementById(productId);
+          var text = 'test ' + productId;
+          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
+        }
+
         </script>
     </div><!-- End Featured Products (Shopify) -->
   </div><!-- End overall Gridblock - container for Pricing and Featured Items -->
