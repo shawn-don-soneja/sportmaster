@@ -623,7 +623,7 @@ function fadeSequence(){
         handles = [handle,handle2,handle3,handle4];
 
 
-        let products = new Map();
+        let products = [];
 
 
         var i;
@@ -631,23 +631,26 @@ function fadeSequence(){
           client.product.fetchByHandle(handles[i]).then((product) => {
             console.log(product.title);
             var string = 'Prod' + i;
-            products.set(string, product['description'] );
+            var NameDescSet = [];
+            NameDescSet.push(product.title);
+            NameDescSet.push(product.description);
             // Do something with the product
             /*
             document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
             console.log(product.variants.length);
             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
             */
+            products.push(NameDescSet);
            });
         }
-        console.log('Map Size:' + products.size);
+        console.log('Array Size' + products.length);
 
         for (var a = 0; a < handles.length; a++) {
           var productId = 'prod' + (i + 1);
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
-          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
+          productDiv.childNodes[1].innerHTML = 'childNotes[2]';
         }
 
         </script>
