@@ -633,7 +633,8 @@ function fadeSequence(){
           client.product.fetchByHandle(handles[i]).then((product) => {
             console.log(product.title);
             productDiv.childNodes[1].innerHTML = product.title;
-            products.set(i, {description: product['description'] });
+            var string = 'Prod' + i;
+            products.set(string, product['description'] );
             // Do something with the product
             /*
             document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
