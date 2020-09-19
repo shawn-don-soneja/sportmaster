@@ -650,7 +650,11 @@ function fadeSequence(){
           console.log(productId);
           var productDiv = document.getElementById(productId);
           var text = 'test ' + productId;
+<<<<<<< HEAD
           productDiv.childNodes[0].innerHTML = 'childNotes[2]';
+=======
+          productDiv.childNodes[2].innerHTML = 'childNotes[2]';
+>>>>>>> 93403f790077c057bb2078767da874a1e68cb166
         }
 
         </script>
