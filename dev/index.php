@@ -627,10 +627,11 @@ function fadeSequence(){
 
         var i;
         for (i = 0; i < handles.length; i++) {
+          var NameDescSet = [];
           client.product.fetchByHandle(handles[i]).then((product) => {
             console.log(product.title);
             var string = 'Prod' + i;
-            var NameDescSet = [];
+
             NameDescSet.push(product.title);
             NameDescSet.push(product.description);
             // Do something with the product
@@ -640,8 +641,9 @@ function fadeSequence(){
             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
             */
             console.log('Name & Desc: ' + NameDescSet);
-            featuredProducts.push(NameDescSet);
+
            });
+           featuredProducts.push(NameDescSet);
         }
         console.log('Array Size' + featuredProducts.length);
         console.log('Array' + featuredProducts);
