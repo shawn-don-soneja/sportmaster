@@ -300,6 +300,11 @@ h5{
   border:0px solid red;
   margin-bottom:50px;
 }
+.grid-two-by-two{
+  display:grid;
+  grid-template:1fr 1fr / 1fr 1fr;
+  margin:auto;
+}
 .priceItem{
   margin:10px;
 }
@@ -588,37 +593,34 @@ function fadeSequence(){
     <div style="border-left:1px solid lightblue;position:absolute;top:0;right:0;width:500px;height:100%;">
         <h4>Featured Products</h4>
 
-        <div id="bag">
-          ddd
+        <div class='grid-two-by-two'
+          style='background:blue;'>
+          hello
         </div>
+        <div id="bag"></div>
 
         <script>
         const client = ShopifyBuy.buildClient({
           domain: 'sportmaster-bait-and-tackle.myshopify.com',
           storefrontAccessToken: '79ec0c028b5dfe70ceef7dd37003f272'
         });
-         handle = 'st-croix-legend-series';
+        handle = 'st-croix-legend-series';
         handle2 = 'penn-slammer-III-spinning-reel';
         handle3 =  'shimano-spheros';
         handle4 = 'daiwa-Bg-spinning-reel';
-         handles = [handle,handle2,handle3,handle4];
-          var i;
+        handles = [handle,handle2,handle3,handle4];
+        var i;
         for (i = 0; i < handles.length; i++) {
           client.product.fetchByHandle(handles[i]).then((product) => {
           // Do something with the product
-
            document.getElementById("bag").innerHTML += "Product Name: " + product.title + " <br>Description: " + product['description'] + " <br>";
-          console.log(product.variants.length);
-             document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
-
-
-        });
+           console.log(product.variants.length);
+           document.getElementById("bag").innerHTML += " Number of Variants: " + product.variants.length + "<br><br><br><br>";
+           });
         }
-
-
         </script>
-    </div>
-  </div>
+    </div><!-- End Featured Products (Shopify) -->
+  </div><!-- End overall Gridblock - container for Pricing and Featured Items -->
 
   <div class="gridBlock" id="test">
     <h4>Useful Links</h4>
