@@ -644,6 +644,7 @@ function fadeSequence(){
            });
         }
         console.log('Array Size' + products.length);
+        console.log('Array' + products);
 
         for (var a = 0; a < handles.length; a++) {
           var productId = 'prod' + (a + 1);
